@@ -36,19 +36,11 @@ public class Medication {
         System.out.println("deleting Medication!");
     }
 
-
     public String getBatchNumber() {
         return BatchNumber;
     }
 
     public static boolean getMedicationCounter() {
-    }
-
-    public String getManufacturer() {
-        return Manufacturer;
-    }
-    public void setManufacturer(String anotherManufacturer) {
-        Manufacturer = anotherManufacturer;
     }
 
     public void printUsedFor() {

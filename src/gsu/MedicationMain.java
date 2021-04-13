@@ -40,8 +40,6 @@ public class MedicationMain {
         int a1recommendedDose = a1.recommendedDose();
         System.out.println(a1recommendedDose);
 
-
-
         drugs1 dr1 = new drugs1 (
                 "BatchNumber1", 45, "4782"
         );
