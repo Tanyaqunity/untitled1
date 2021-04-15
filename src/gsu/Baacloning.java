@@ -4,7 +4,7 @@ public class Baacloning {
     public static void main(String[] args) {
         Baa originalBaa = new Baa();
         originalBaa.quantity = 45;
-        originalBaa.setManufacturer("Belarus");
+ //       originalBaa.setManufacturer("Belarus");
         originalBaa.doseBaa = 5;
 
         Baa cloneBaa = originalBaa.cloneBaa();

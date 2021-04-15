@@ -13,7 +13,7 @@ public class Medication {
         return MedicationCounter;
     }
 
-    private String BatchNumber;
+    private String batchNumber;
 
     public Medication() {
         this("EMPTY");
@@ -22,13 +22,13 @@ public class Medication {
 
     public Medication(String BatchNumber) {
         System.out.println("it's Medication " + BatchNumber);
-        this.BatchNumber = BatchNumber;
+        this.batchNumber = BatchNumber;
 
         MedicationCounter++;
     }
 
     public void setBatchNumber(String BatchNumber) {
-        this.BatchNumber = BatchNumber;
+        this.batchNumber = BatchNumber;
     }
 
     @Override
@@ -37,10 +37,7 @@ public class Medication {
     }
 
     public String getBatchNumber() {
-        return BatchNumber;
-    }
-
-    public static boolean getMedicationCounter() {
+        return batchNumber;
     }
 
     public void printUsedFor() {
@@ -60,7 +57,7 @@ public class Medication {
         }
         if (another instanceof Medication) {
             Medication anotherMedication = (Medication) another;
-            if (this.BatchNumber().equals(anotherMedication.BatchNumber())) {
+            if (this.batchNumber.equals(anotherMedication.batchNumber)) {
                 return true;
             }
         }
@@ -68,16 +65,17 @@ public class Medication {
         return false;
     }
 
-    private Object BatchNumber() {
-    }
+//    private Object BatchNumber() {
+//    }
 
     @Override
-    public Object hashCode() {
-        return Objects.hashCode(BatchNumber());
+    public int hashCode() {
+        return Objects.hashCode(batchNumber);
+    }
 
         @Override
         public String toString() {
-            return "Medication (BatchNumber=" + BatchNumber() + ")";
+            return "Medication (BatchNumber=" + batchNumber + ")";
         }
 
 

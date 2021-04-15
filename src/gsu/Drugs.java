@@ -1,40 +1,40 @@
 package gsu;
 
 public class Drugs extends Medication {
-    private final String BatchNumber;
+    private String batchNumber;
     public static int DrugsCounter;
-   int DoseDrugs;
+   int doseDrugs;
+
 
     public Drugs(String BatchNumber) {
-        super();
-    }
-
-    public Drugs(String BatchNumber) {
-        this.BatchNumber = BatchNumber;
+        this.batchNumber = BatchNumber;
         System.out.println("Drugs constructor");
         DrugsCounter++;
     }
     public Drugs(String BatchNumber, int DoseDrugs) {
         super(BatchNumber);
-        this.BatchNumber = BatchNumber;
+        this.batchNumber = BatchNumber;
         this.doseDrugs = DoseDrugs;
         System.out.println("Drugs constructor with parameters");
     }
 
     public String getBatchNumber() {
-        return BatchNumber;
+        return batchNumber;
     }
 
     public int getDoseDrugs() {
-        return DoseDrugs;
+        return doseDrugs;
     }
 
     public Drugs() {
     }
 
     public void setDoseDrugs(int DoseDrugs) {
-        this.DoseDrugs = DoseDrugs;
+        this.doseDrugs = DoseDrugs;
     }
+
+    public void setBatchNumber(String batchNumber) { this.batchNumber = batchNumber; }
+
 
     @Override
     public boolean equals(Object another) {
@@ -48,7 +48,7 @@ public class Drugs extends Medication {
 
         if (another instanceof Drugs) {
             Drugs pk = (Drugs) another;
-            if (this.DoseDrugs == pk.DoseDrugs && this.BatchNumber.equals(pk.BatchNumber)) {
+            if (this.doseDrugs == pk.doseDrugs && this.batchNumber.equals(pk.batchNumber)) {
                 return true;
             }
         }
@@ -59,7 +59,7 @@ public class Drugs extends Medication {
     @Override
     public String toString() {
         return "PublicTransport (BatchNumber=" +
-                BatchNumber + ", DoseDrugs=" + DoseDrugs + ", " + super.toString() + ")";
+                batchNumber + ", DoseDrugs=" + doseDrugs + ", " + super.toString() + ")";
     }
 
     @Override

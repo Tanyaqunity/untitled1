@@ -35,18 +35,19 @@ public class MedicationMain {
 
         Drugs drugs1 = new Drugs();
         drugs1.quantity = 40;
-        drugs1.DoseDrugs = 3;
+        drugs1.doseDrugs = 3;
 
         int a1recommendedDose = a1.recommendedDose();
         System.out.println(a1recommendedDose);
 
-        drugs1 dr1 = new drugs1 (
-                "BatchNumber1", 45, "4782"
+        Drugs dr1 = new Drugs (
+                "BatchNumber1", 45
         );
 
-        Drugs dr2 = new Drugs("BatchNumber1");
-        dr2.set.quantity(45);
-        dr2.setDose("4782");
+        Drugs dr2 = new Drugs("BatchNumber1",45 );
+        dr2.setDoseDrugs(4);
+        dr2.setBatchNumber("BatchNumber1");
+
 
         System.out.println(dr1.equals(dr2));
 
